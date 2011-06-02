@@ -9,15 +9,9 @@
 #
 #
 require "e2mmap"
-
-require "irb/init"
-require "irb/context"
-require "irb/extend-command"
+require "irb/init", "irb/context", "irb/extend-command"
 #require "irb/workspace"
-
-require "irb/ruby-lex"
-require "irb/input-method"
-require "irb/locale"
+require "irb/ruby-lex", "irb/input-method", "irb/locale"
 
 STDOUT.sync = true
 
