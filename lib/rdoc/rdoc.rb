@@ -1,19 +1,10 @@
 require 'rdoc'
-
-require 'rdoc/encoding'
-require 'rdoc/parser'
-
+require 'rdoc/encoding', 'rdoc/parser'
 # Simple must come first
 require 'rdoc/parser/simple'
-require 'rdoc/parser/ruby'
-require 'rdoc/parser/c'
-
-require 'rdoc/stats'
-require 'rdoc/options'
-
-require 'find'
-require 'fileutils'
-require 'time'
+require %w(simple ruby c).map {|r| "rdoc/parser/#{r}"}
+require 'rdoc/stats', 'rdoc/options'
+require 'find', 'fileutils', 'time'
 
 ##
 # Encapsulate the production of rdoc documentation. Basically you can use this
